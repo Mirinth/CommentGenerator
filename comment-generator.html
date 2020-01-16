@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style.css"></link>
+	</head>
+	<body>
+		<div class='generator'>
+			<div id='container'></div>
+
+			<hr></hr>
+
+			<input type='button' value='copy' id='copybtn'></input>
+			<input type='button' value='reset' id='resetbtn'></input>
+			<input type='number' value='0.0' id='scorebox' size='5'></input>
+
+			<br>
+
+			<textarea id='commentbox' rows='10'></textarea>
+		</div>
+
+		<br>
+		<label for="filepicker" id="filepickerlabel">Choose a file</label>
+		<input type="file" id="filepicker" accept=".txt, text/plain"/>
+	</body>
+
+	<script src="ast.js"></script>
+	<script src="reader.js"></script>
+	<script src="parser.js"></script>
+	<script src="main.js"></script>
+	<script src="test.js"></script>
+</html>

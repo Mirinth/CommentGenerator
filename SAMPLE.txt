@@ -1,0 +1,116 @@
+>! This is a sample file illustrating the syntax of comments
+>! files for the comment generator. Most lines are commented,
+>! like these ones, to explain what is going on. You may find
+>! it informative to make a backup of this file and then
+>! experiment with it to see what happens.
+>! ----------------------------------------------------------
+
+>! This is the assignment's score. You can use "point", "pt",
+>! or "pts" instead of "points". You can also use negative
+>! numbers or 0. You can even omit everything but the number.
+>! Try switching which lines are commented to see what
+>! happens.
+10 points
+>! 10 pts
+>! 99 pt
+>! 0.1 pt
+>! -5 pts
+
+
+>! This is a global macro named "global.conspiracy". It can
+>! be referenced in any issue in the file later on.
+{{global.conspiracy}}
+There is a global conspiracy to make this tool obsolete.
+
+>! This is the start of the first section.
+>! You only need four dashes, but more were used here to
+>! make the file look nicer. Issues following these two lines
+>! will appear under a header titled "Recon satellite".
+-------------------------------------------------------------
+Recon satellite
+
+>! This is a local macro named "solution". It can be
+>! referenced in any issue in this section, but can't be
+>! used in issues in other sections.
+{{solution}}
+You'll need to rotate the satellite clockwise to dock.
+
+>! This is another local macro, this time named
+>! "alt.solution". It will also be accessible in this section.
+{{alt.solution}}
+Use the ship's electromagnets to guide the satellite.
+
+>! This is the first issue. It will generate a button titled
+>! "Missing". When clicked, that button will subtract 2 points
+>! from the computed score and append the text "No solution
+>! was provided. ..." with the "solution" macro expanded at
+>! the end.
+# Missing (-2 pts)
+No solution was provided. {{solution}}
+
+>! This issue illustrates how you can use multiple lines.
+>! The newline will be replaced with a space and the macro
+>! will be expanded.
+# Error detected (-2 pts)
+The space shuttle would have detected an error using this
+approach. {{solution}}
+
+>! You can also give positive scores to make this issue
+>! award points instead.
+# System overload (2 pts)
+You overloaded the enemy space ship's computers. Excellent!
+
+>! There is no "undefined" macro, so the text of this issue
+>! will simply be "Hello, {{undefined}}!"
+# Undefined (1 point)
+Hello, {{undefined}}!
+
+>! Here is another section. Issues defined here will be shown
+>! under the "Meteoroid" header.
+-------------------------------------------------------------
+Force
+
+>! This section has its own "solution" macro.
+{{solution}}
+In general, any new Force users will have to be evil in order
+to balance the Force since so many existing ones are Jedi.
+
+>! This issue will get the balance solution just above instead
+>! of the docking solution from the previous section.
+# Missing (3 pts)
+The Force problem's answer was missing. {{solution}}
+
+>! {{alt.solution}} is a local macro to a different section,
+>! so using it here won't work since it's undefined now.
+>! The issue here will just say "...problem. {{alt.solution}}"
+>! at the end.
+# Graphing (-1 point)
+While graphing the number of Jedi vs. Sith works, there is a
+simpler way to solve this problem. {{alt.solution}}
+
+
+>! A third section for your reading pleasure
+-------------------------------------------------------------
+Clippy
+
+>! This issue has no score, so it will have no effect on the
+>! computed score in the comment generator.
+# Copy
+Did you know? You can middle-click a link to open a new tab.
+
+>! This issue's score is missing one of "pt", "pts", "point",
+>! or "points" at the end, so its title will be "Paste (-1)"
+>! it won't have any effect on the computed score.
+# Paste (-1)
+Did you know? You can middle-click a tab to close it.
+
+>! Here we use the global macro defined way up at the top of
+>! the file.
+# Conspiracy
+Did you know? {{global.conspiracy}}
+
+
+>! This concludes the sample file. As mentioned before, you
+>! can make a backup and experiment to find out what happens.
+>! You can also copy it and use it for a template to write
+>! your own comment files.
