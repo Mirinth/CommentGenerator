@@ -98,7 +98,8 @@ as local ones, so most of the documentation is there.
 
 Issues can be organized into sections for easier scanning.
 Each section will have its own heading that helps narrow down
-the list of issues when looking for the right one. There must be at least one section, but you can use as many as you want.
+the list of issues when looking for the right one. There must
+be at least one section, but you can use as many as you want.
 
 There are no hard rules for what constitutes a section. You
 can define them however you like. It may be convenient to use
@@ -146,7 +147,9 @@ override global ones. If there is still a tie, then earlier
 ones override later ones. Using macros within other macros is
 sort-of supported, but messy and probably best avoided.
 
-To define a macro, write {{macro-name}} on a line by itself, where "macro-name" is the name you want to refer to the macro by. On the next line, write the text you want to replace the
+To define a macro, write {{macro-name}} on a line by itself,
+where "macro-name" is the name you want to refer to the macro
+by. On the next line, write the text you want to replace the
 macro by. You can insert newlines (and even blank lines) in
 the macro's text. They'll be stripped out and discarded, then
 replaced with a space. The macro's text will continue until
@@ -181,7 +184,8 @@ score is optional though, so you don't have to include it if
 you don't want score adjustments for the issue.
 
 Note that unlike the score line at the top of the file,
-writing "(-2)" won't work. It needs to have either "pt", "pts", "point", or "points".
+writing "(-2)" won't work. It needs to have either "pt", "pts",
+"point", or "points".
 
 After the name and optional score, the next line will start
 the text of the comment fragment. This works in much the same
@@ -192,7 +196,8 @@ new section or issue, or the file ends.
 If you want to use a macro within the comment fragment's text,
 simply write the macro's name in double-curly-braces just
 like how you defined it above. The comment generator tool will
-automatically replace it with the text it refers to. The earliest-defined local macro will be used. If no local macro
+automatically replace it with the text it refers to. The
+earliest-defined local macro will be used. If no local macro
 matches the name, then the earliest-defined global one will
 be used instead. If there is no global one either, then the
 macro's name will appear unmodified in the result.
